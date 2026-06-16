@@ -10,10 +10,13 @@
   项目概念和 PM 技能工作流实验记录。内容包括竞品分析、用户细分、价值主张、MVP PRD、反向质疑假设和后续增强方向。
 
 - `chatprd-prd-test-2026-06-16.md`  
-  ChatPRD 体验记录 01。记录 ChatPRD 对“帮我写一个 AI PM Research Agent 的 PRD”这个任务的回答，并补充中文整理和产品评价。
+  ChatPRD 首轮输出测试 01。记录 ChatPRD 对“帮我写一个 AI PM Research Agent 的 PRD”这个任务的首次回答，并补充中文整理和产品评价。
 
 - `chatprd-target-user-analysis-2026-06-16.md`  
-  ChatPRD 体验记录 02。记录 ChatPRD 对自身目标用户和核心价值的分析，并补充产品评价与对本项目的启发。
+  ChatPRD 首轮输出测试 02。记录 ChatPRD 对自身目标用户和核心价值的首次分析，并补充产品评价与对本项目的启发。
+
+- `chatprd-multiturn-test-2026-06-17.md`  
+  ChatPRD 多轮追问测试。记录围绕 PRD、ChatPRD 自身分析、GitHub 项目分析三组任务的追问结果，并总结一次性输出与多轮追问后的能力差异。
 
 ## 使用原则
 
