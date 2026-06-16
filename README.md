@@ -1,40 +1,41 @@
 # AI PM Research Agent
 
-This folder is a project workspace for exploring and validating `AI PM Research Agent`.
+这个仓库是 `AI PM Research Agent` 的独立项目空间。
 
-The project goal is to build a workflow that helps AI product managers and career switchers analyze AI products, GitHub repositories, and industry trends, then turn the research into structured product artifacts.
+项目目标：探索并验证一个面向 AI 产品经理和转行者的研究工作流，帮助用户分析 AI 产品、GitHub 项目和行业趋势，并把研究结果转化为结构化产品产物。
 
-## Current Files
+## 当前文件
 
 - `project-concept-and-skill-workflow-2026-06-16.md`  
-  First concept note and PM skill workflow experiment. It includes competitor analysis, user segments, value proposition, MVP PRD, red-team assumptions, and enhancement ideas.
+  项目概念和 PM 技能工作流实验记录。内容包括竞品分析、用户细分、价值主张、MVP PRD、反向质疑假设和后续增强方向。
 
 - `chatprd-prd-test-2026-06-16.md`  
-  ChatPRD test 01. It records ChatPRD's answer to the prompt "Help me write a PRD for AI PM Research Agent", plus Chinese translation and product review.
+  ChatPRD 体验记录 01。记录 ChatPRD 对“帮我写一个 AI PM Research Agent 的 PRD”这个任务的回答，并补充中文整理和产品评价。
 
 - `chatprd-target-user-analysis-2026-06-16.md`  
-  ChatPRD test 02. It records ChatPRD's target user and value proposition analysis, plus product review and implications for AI PM Research Agent.
+  ChatPRD 体验记录 02。记录 ChatPRD 对自身目标用户和核心价值的分析，并补充产品评价与对本项目的启发。
 
-## Working Principle
+## 使用原则
 
-This is not only a learning note folder. Treat it as a product project:
+这个仓库不是普通学习笔记，而是一个作品项目。
 
-1. Use real tools and competitors.
-2. Record original outputs.
-3. Add product judgment.
-4. Extract requirements for `AI PM Research Agent`.
-5. Turn repeated workflows into reusable skills or templates.
+后续记录遵循这套方法：
 
-## Next Step
+1. 体验真实工具和真实竞品。
+2. 保留工具的原始输出或中文整理版。
+3. 补充自己的产品判断。
+4. 提炼 `AI PM Research Agent` 的需求。
+5. 把重复出现的分析流程沉淀成可复用模板或技能。
 
-Run more real product/repo analysis tests and compare:
+## 下一步
+
+继续测试更多真实产品和仓库，并比较不同工具的表现：
 
 - ChatPRD
 - pm-skills
-- Claude / ChatGPT with strong prompts
-- Perplexity / NotebookLM-style research tools
+- Claude / ChatGPT 的强提示词版本
+- Perplexity / NotebookLM 类研究工具
 
-The key question:
+核心问题：
 
-> What can AI PM Research Agent do better than a PRD generator?
-
+> AI PM Research Agent 能比普通 PRD 生成器多做什么？

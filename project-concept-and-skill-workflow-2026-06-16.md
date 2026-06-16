@@ -1,416 +1,415 @@
-# AI PM Research Agent - Skill Experiment 01
+# AI PM Research Agent 项目概念与技能工作流实验
 
-Date: 2026-06-16
+日期：2026-06-16
 
-Goal: Use the newly installed PM / Agent skills to explore an `AI PM Research Agent` concept, then record what worked and what should be improved.
+目标：使用已安装的 PM / Agent 技能探索 `AI PM Research Agent` 的项目概念，并记录哪些地方有效、哪些地方需要改进。
 
-Skills used:
+使用的技能：
 
-- `competitor-analysis`
-- `market-segments`
-- `value-proposition`
-- `create-prd`
-- `strategy-red-team`
-- `context-engineering` as meta guidance
+- `competitor-analysis`：竞品分析
+- `market-segments`：市场细分
+- `value-proposition`：价值主张
+- `create-prd`：PRD 生成
+- `strategy-red-team`：策略反向质疑
+- `context-engineering`：上下文工程，用作元指导
 
-Reference signals:
+参考信号：
 
-- [phuryn/pm-skills](https://github.com/phuryn/pm-skills): PM Skills Marketplace, with PM skills and chained workflows.
-- [ChatPRD](https://www.chatprd.ai/): commercial AI product manager platform for product docs and coaching.
-- [MindStudio: 10 AI Agents for Product Managers](https://www.mindstudio.ai/blog/ai-agents-for-product-managers): examples of PM workflows such as roadmap visualization, app review analysis, PRD chatbot, and dashboards.
-- [Product Compass PM Skills Marketplace article](https://www.productcompass.pm/p/pm-skills-marketplace-claude): open-source PM skills and workflows for AI-assisted product work.
+- [phuryn/pm-skills](https://github.com/phuryn/pm-skills)：PM 技能市场，提供 PM 工作流和可串联的技能。
+- [ChatPRD](https://www.chatprd.ai/)：面向产品经理的商业化 AI 文档与辅导平台。
+- [MindStudio：10 个产品经理 AI Agents](https://www.mindstudio.ai/blog/ai-agents-for-product-managers)：列举路线图可视化、应用评论分析、PRD 聊天机器人和多数据源仪表盘等 PM 工作流。
+- [Product Compass PM Skills Marketplace 文章](https://www.productcompass.pm/p/pm-skills-marketplace-claude)：介绍面向 AI 辅助产品工作的开源 PM 技能市场和工作流。
 
-## 1. Competitor Analysis
+## 1. 竞品分析
 
-### Market Definition
+### 市场定义
 
-`AI PM Research Agent` sits between three markets:
+`AI PM Research Agent` 处在三个市场的交叉点：
 
-1. AI writing tools for product docs.
-2. Product management workflow tools.
-3. Research agents that collect, summarize, and structure external information.
+1. 面向产品文档的 AI 写作工具。
+2. 产品管理工作流工具。
+3. 收集、总结和结构化外部信息的研究型 Agent。
 
-The target job is not just "write a PRD." The real job is:
+它的目标任务不只是“写一份 PRD”，而是：
 
-> Help a PM quickly understand a new product, repo, market, or user problem, then turn that research into usable product judgment.
+> 帮助产品经理快速理解一个新产品、新仓库、新市场或用户问题，并把研究转化为可用的产品判断。
 
-### Direct / Adjacent Competitors
+### 直接 / 相邻竞品
 
-| Competitor | Type | Strength | Gap / Opportunity |
+| 竞品 | 类型 | 优势 | 缺口 / 机会 |
 | --- | --- | --- | --- |
-| ChatPRD | Commercial AI PM platform | Clear PM positioning, doc generation, coaching, team workflow | More focused on product docs than open-ended trend/repo/market research |
-| phuryn/pm-skills | Open-source PM skills marketplace | Broad PM frameworks: discovery, strategy, execution, GTM, analytics | Skills are modular, but not packaged around "AI PM transition / portfolio building" |
-| Productboard AI / Aha! AI / Linear AI style features | PM SaaS with AI features | Embedded in existing product workflows and customer data | Usually assumes a company context; less useful for solo research and public-source analysis |
-| Generic LLMs: ChatGPT / Claude / Gemini | General AI assistant | Flexible, strong reasoning, easy to use | No fixed PM workflow, weak repeatability, depends heavily on prompt quality |
-| Perplexity / NotebookLM / research agents | Research and synthesis | Better citation and source grounding | Less PM-specific; usually does not output PRD, segmentation, roadmap, or portfolio framing |
+| ChatPRD | 商业化 AI PM 平台 | PM 定位清晰，擅长文档生成、产品辅导和团队工作流 | 更偏产品文档，不够聚焦开放式趋势、仓库和市场研究 |
+| phuryn/pm-skills | 开源 PM 技能市场 | 覆盖发现、策略、执行、GTM、分析等广泛 PM 框架 | 技能是模块化的，但没有围绕“AI PM 转行 / 作品集构建”打包 |
+| Productboard AI / Aha! AI / Linear AI 类功能 | 带 AI 能力的 PM SaaS | 嵌在现有产品工作流和客户数据里 | 通常默认用户已有公司上下文，不适合个人公开资料研究 |
+| ChatGPT / Claude / Gemini | 泛用 AI 助手 | 灵活、推理强、上手简单 | 没有固定 PM 工作流，可重复性弱，高度依赖提示词质量 |
+| Perplexity / NotebookLM / 研究型工具 | 研究和资料综合 | 引用和来源锚定更强 | 不够 PM 专用，通常不会输出 PRD、用户细分、路线图或作品集角度 |
 
-### Differentiation Opportunity
+### 差异化机会
 
-The strongest opening is not "another PRD generator." It is:
+最强的切入口不是“再做一个 PRD 生成器”，而是：
 
-> A research-to-product-decision workflow for AI PMs, especially people evaluating new AI products, GitHub repos, and market opportunities from public information.
+> 面向 AI PM 的“研究到产品决策”工作流，尤其帮助用户评估 AI 产品、GitHub 仓库和公开市场机会。
 
-Potential differentiators:
+潜在差异化：
 
-- GitHub repo / trend scan as a first-class input.
-- Source-backed product analysis, not just generic advice.
-- Output optimized for PM artifacts: segment, JTBD, value prop, assumptions, MVP, metrics, PRD.
-- Built-in "portfolio angle": how this research can become a public project, case study, or interview story.
-- Red-team step by default, so every idea includes kill assumptions and cheap tests.
+- 把 GitHub 仓库和趋势扫描作为一等输入。
+- 输出有来源支撑的产品分析，而不是泛泛建议。
+- 输出结构面向 PM 产物：用户细分、JTBD、价值主张、假设、MVP、指标、PRD。
+- 内置“作品集角度”：这次研究如何变成公开项目、案例分析或面试素材。
+- 默认加入反向质疑步骤，让每个想法都有关键假设和低成本验证实验。
 
-## 2. Market Segments
+## 2. 市场细分
 
-### Segment A: AI PM Career Switchers
+### 细分 A：AI PM 转行者
 
-Profile:
+画像：
 
-- Product managers, operations people, analysts, or business students moving into AI PM.
-- Often have product intuition but weak public portfolio.
-- Need to learn fast and show proof of work.
+- 正在转向 AI PM 的产品经理、运营、分析师或商科学生。
+- 有一定产品直觉，但缺少公开作品集。
+- 需要快速学习，并展示可见的产出。
 
-JTBD:
+JTBD：
 
-> When I discover a new AI product or GitHub repo, help me understand whether it matters and how I can turn it into a portfolio artifact.
+> 当我发现一个新的 AI 产品或 GitHub 仓库时，帮我判断它是否重要，以及我能否把它转化成作品集素材。
 
-Pain points:
+痛点：
 
-- Too many AI products and repos.
-- Hard to distinguish hype from useful product signal.
-- Hard to turn reading into concrete PRD / case study / demo.
+- AI 产品和开源仓库太多。
+- 很难区分热点和真正有用的产品信号。
+- 很难把阅读转化为具体 PRD、案例分析或 demo。
 
-Product fit:
+产品适配度：
 
-- Very strong for MVP.
-- This is the best first segment because the user can operate with public data and does not require company integrations.
+- 非常适合作为 MVP 首个用户群。
+- 这个细分可以主要使用公开数据，不需要企业内部集成。
 
-### Segment B: Solo PMs / Early Startup Founders
+### 细分 B：独立 PM / 早期创业者
 
-JTBD:
+JTBD：
 
-> Help me research competitors, user segments, and product positioning before I build.
+> 在开始做产品之前，帮我研究竞品、用户细分和产品定位。
 
-Pain points:
+痛点：
 
-- Limited time for structured market research.
-- Need fast decisions, but generic LLM outputs are too vague.
-- Need investor / team-ready docs.
+- 没有足够时间做结构化市场研究。
+- 需要快速决策，但泛用 LLM 输出太空。
+- 需要可给投资人或团队看的文档。
 
-Product fit:
+产品适配度：
 
-- Good, but they may require more real market validation and deeper GTM support.
+- 有价值，但需要更强的市场验证和 GTM 支持。
 
-### Segment C: PM Teams Inside Companies
+### 细分 C：公司内部 PM 团队
 
-JTBD:
+JTBD：
 
-> Help the team synthesize customer feedback, market signals, and strategy docs into product decisions.
+> 帮助团队把客户反馈、市场信号和策略文档综合成产品决策。
 
-Pain points:
+痛点：
 
-- Internal context is scattered across docs, tickets, analytics, sales calls.
-- Security and permission boundaries matter.
+- 内部上下文分散在文档、工单、数据、销售通话里。
+- 安全、权限和数据边界很重要。
 
-Product fit:
+产品适配度：
 
-- Valuable but not ideal for MVP because it needs integrations, access control, and trust.
+- 长期价值高，但不适合作为 MVP，因为需要集成、权限控制和信任建设。
 
-### Segment D: Product Educators / PM Coaches
+### 细分 D：产品教育者 / PM 教练
 
-JTBD:
+JTBD：
 
-> Help students practice structured product thinking using live products and repos.
+> 帮助学生用真实产品和仓库练习结构化产品思考。
 
-Pain points:
+痛点：
 
-- Need repeatable exercises.
-- Need rubrics and feedback, not only final answers.
+- 需要可重复的练习。
+- 需要评分标准和反馈，而不是只有最终答案。
 
-Product fit:
+产品适配度：
 
-- Good secondary segment.
-- Could become a course companion or training tool.
+- 适合作为第二阶段用户群。
+- 可以成为课程搭档或训练工具。
 
-## 3. Value Proposition
+## 3. 价值主张
 
-Target first segment: AI PM career switchers.
+首个目标细分：AI PM 转行者。
 
-### Who
+### 服务谁
 
-Aspiring AI product managers who want to build a public portfolio from real AI products, open-source repos, and market trends.
+希望用真实 AI 产品、开源仓库和市场趋势构建公开作品集的准 AI 产品经理。
 
-### Why
+### 为什么需要
 
-They need to learn fast, but passive reading does not create visible proof. They need to convert scattered signals into product judgment.
+他们需要快速学习，但被动阅读不会产生可见证明。他们需要把分散信号转化为产品判断。
 
-### What Before
+### 使用前状态
 
-They manually browse GitHub, newsletters, product websites, YouTube videos, and articles. Notes are scattered. Outputs are often vague summaries, not product artifacts.
+他们手动浏览 GitHub、资讯简报、产品官网、视频和文章。笔记分散，输出常常只是模糊总结，而不是产品产物。
 
-### How
+### 如何解决
 
-The agent takes a topic, product URL, GitHub repo, or market question and returns a structured PM analysis:
+Agent 接收一个主题、产品 URL、GitHub 仓库或市场问题，并返回结构化 PM 分析：
 
-- What it is.
-- Who it serves.
-- What problem it solves.
-- Competitor / alternative landscape.
-- Segment and JTBD.
-- Product opportunity.
-- MVP scope.
-- Metrics.
-- Risks and cheap validation tests.
-- Portfolio angle.
+- 它是什么。
+- 服务谁。
+- 解决什么问题。
+- 竞品和替代方案。
+- 用户细分和 JTBD。
+- 产品机会。
+- MVP 范围。
+- 指标。
+- 风险和低成本验证测试。
+- 作品集角度。
 
-### What After
+### 使用后状态
 
-The user can turn one research session into:
+用户可以把一次研究转化为：
 
-- A GitHub weekly review.
-- A PRD draft.
-- A portfolio case study.
-- An interview talking point.
-- A concrete demo idea.
+- GitHub 周榜观察。
+- PRD 初稿。
+- 作品集案例。
+- 面试表达素材。
+- 具体演示想法。
 
-### Alternatives
+### 替代方案
 
-- Generic LLM chat: flexible but inconsistent.
-- ChatPRD: strong for docs but less focused on public-source research and career portfolio.
-- Notion / NotebookLM / Perplexity: good research support but not PM artifact workflow.
-- Manual research: high quality possible, but slow and hard to repeat.
+- 泛用 LLM 聊天：灵活但不稳定。
+- ChatPRD：文档能力强，但不够聚焦公开资料研究和转行作品集。
+- Notion / NotebookLM / Perplexity：研究支持较好，但不是 PM 产物工作流。
+- 手动研究：质量可能高，但慢，且难以重复。
 
-Concise value proposition:
+简洁价值主张：
 
-> AI PM Research Agent helps aspiring AI product managers turn public AI product signals into structured product decisions, PRD drafts, and portfolio-ready case studies.
+> AI PM Research Agent 帮助准 AI 产品经理把公开 AI 产品信号转化为结构化产品判断、PRD 草稿和作品集案例。
 
 ## 4. MVP PRD
 
-### 1. Summary
+### 1. 摘要
 
-AI PM Research Agent is a research workflow that helps users analyze an AI product, GitHub repo, or market topic and convert it into PM-ready artifacts.
+AI PM Research Agent 是一个研究工作流，帮助用户分析 AI 产品、GitHub 仓库或市场主题，并转化为 PM 可用产物。
 
-The first version focuses on public-source research and structured outputs, not internal company data.
+第一版聚焦公开资料研究和结构化输出，不处理企业内部数据。
 
-### 2. Contacts
+### 2. 相关角色
 
-| Name | Role | Comment |
+| 姓名 | 角色 | 说明 |
 | --- | --- | --- |
-| Chen Zhuoxin | Product owner / target user | First user and evaluator |
-| Codex | Build and research assistant | Helps run skill workflows and produce artifacts |
+| 陈卓欣 | 产品负责人 / 目标用户 | 第一位用户和评估者 |
+| Codex | 构建与研究助手 | 帮助运行技能工作流并生成产物 |
 
-### 3. Background
+### 3. 背景
 
-AI product work is moving quickly. PMs need to track tools, repos, workflows, and competitors. Existing tools can write documents, but they often do not help users decide what matters or how to turn research into a public proof-of-work artifact.
+AI 产品变化很快。PM 需要持续追踪工具、开源仓库、工作流和竞品。现有工具可以写文档，但通常不能帮助用户判断什么重要，也不能帮助用户把研究转化为公开成果证明。
 
-This is now easier because LLMs can search, summarize, classify, and draft structured product documents from public information.
+这件事现在更容易实现，因为 LLM 已经可以基于公开信息做检索、总结、分类和结构化产品文档生成。
 
-### 4. Objective
+### 4. 目标
 
-Objective:
+目标：
 
-> Help an aspiring AI PM turn one product/repo/topic into a structured product analysis in under 30 minutes.
+> 帮助准 AI PM 在 30 分钟内，把一个产品、仓库或主题转化为结构化产品分析。
 
-Key results for MVP:
+MVP 关键结果：
 
-- 5 completed research runs across different topics.
-- Each run produces at least 1 usable artifact: PRD, GitHub review, opportunity brief, or portfolio note.
-- User rates output usefulness at 4/5 or above in 3 of 5 runs.
-- At least 3 repeated output sections become stable templates.
+- 完成 5 次不同主题的研究。
+- 每次至少产出 1 个可用产物：PRD、GitHub 观察、机会简报或作品集笔记。
+- 5 次中至少 3 次，用户对输出有用性的评分达到 4/5 以上。
+- 至少沉淀 3 个稳定复用的输出模块。
 
-### 5. Market Segment
+### 5. 市场细分
 
-First target:
+第一目标用户：
 
-- AI PM career switchers who need portfolio artifacts.
+- 需要作品集产物的 AI PM 转行者。
 
-Do not target first:
+第一版不优先服务：
 
-- Large enterprise PM teams with private data.
-- Fully automated product strategy for executives.
+- 拥有私有数据的大型企业 PM 团队。
+- 面向高管的全自动产品战略工具。
 
-### 6. Value Proposition
+### 6. 价值主张
 
-For aspiring AI PMs who need proof of product thinking, AI PM Research Agent turns live AI market signals into structured product artifacts with citations, assumptions, and validation tests.
+对于需要证明产品思考能力的准 AI PM，AI PM Research Agent 可以把实时 AI 市场信号转化为结构化产品产物，并包含引用、假设和验证测试。
 
-### 7. Solution
+### 7. 解决方案
 
-MVP input:
+MVP 输入：
 
-- Topic text, such as `AI PM Research Agent`.
-- Product website URL.
-- GitHub repo URL.
-- Optional user goal: learn, compare, write PRD, find portfolio angle.
+- 文本主题，例如 `AI PM Research Agent`。
+- 产品官网 URL。
+- GitHub 仓库 URL。
+- 可选用户目标：学习、比较、写 PRD、寻找作品集角度。
 
-MVP output:
+MVP 输出：
 
-1. One-line summary.
-2. Market and competitor scan.
-3. User segments and JTBD.
-4. Value proposition.
-5. MVP PRD draft.
-6. Red-team assumptions.
-7. Portfolio angle.
-8. Next action checklist.
+1. 一句话总结。
+2. 市场和竞品扫描。
+3. 用户细分和 JTBD。
+4. 价值主张。
+5. MVP PRD 草稿。
+6. 反向质疑假设。
+7. 作品集角度。
+8. 下一步行动清单。
 
-Key features:
+关键功能：
 
-- Source collection and citation.
-- PM framework selection.
-- Artifact generator.
-- Red-team review.
-- Experiment log saved as Markdown.
+- 来源收集和引用。
+- PM 框架选择。
+- 产物生成器。
+- 反向质疑评审。
+- 实验记录保存为 Markdown。
 
-Not in MVP:
+不在 MVP 范围内：
 
-- Login and multi-user team workspace.
-- Enterprise integrations.
-- Full analytics dashboard.
-- Automatic publishing.
-- Paid subscription.
+- 登录和多人团队空间。
+- 企业级集成。
+- 完整数据分析仪表盘。
+- 自动发布。
+- 付费订阅。
 
-### 8. Release
+### 8. 发布节奏
 
-Version 0:
+版本 0：
 
-- Manual workflow using installed skills and Markdown output.
+- 使用已安装技能和 Markdown 输出，手动跑通工作流。
 
-Version 1:
+版本 1：
 
-- A repeatable prompt/workflow template.
-- A saved experiment folder.
-- 3-5 completed examples.
+- 形成可重复的提示词 / 工作流模板。
+- 保存实验记录目录。
+- 完成 3 到 5 个真实样例。
 
-Version 2:
+版本 2：
 
-- Lightweight web or CLI interface.
-- Input URL parser.
-- Output artifact selector.
+- 做轻量网页或命令行界面。
+- 支持输入 URL 解析。
+- 支持选择输出产物类型。
 
-## 5. Red-Team
+## 5. 反向质疑
 
-### Top Kill-Assumptions
+### 关键致命假设
 
-#### 1. Claim: AI PM career switchers will repeatedly use this.
+#### 1. 假设：AI PM 转行者会反复使用这个工具
 
-Fails if:
+失败条件：
 
-- They prefer general chat and do not value fixed PM artifacts.
+- 用户更喜欢直接用通用聊天工具，不重视固定 PM 产物。
 
-Evidence to get this week:
+本周要拿到的证据：
 
-- Run 3 real topics and ask whether the structured output is better than a normal chat answer.
+- 跑 3 个真实主题，询问结构化输出是否比普通聊天回答更有价值。
 
-Kill criterion:
+终止标准：
 
-- If fewer than 2 of 3 runs produce something worth saving to GitHub, the workflow is not sharp enough.
+- 如果 3 次中少于 2 次产物值得保存到 GitHub，说明工作流不够锋利。
 
-Cheapest test:
+最低成本测试：
 
-- Use this exact Markdown workflow for 3 topics: `pm-skills`, `ChatPRD`, and `cross-border AI shopping agent`.
+- 用同一套 Markdown 工作流测试 3 个主题：`pm-skills`、`ChatPRD`、`跨境电商 AI 导购 Agent`。
 
-#### 2. Claim: Public information is enough for useful PM judgment.
+#### 2. 假设：公开信息足以支持有用的 PM 判断
 
-Fails if:
+失败条件：
 
-- Outputs remain too generic without internal user data or interviews.
+- 没有内部用户数据或访谈时，输出仍然过于泛泛。
 
-Evidence to get this week:
+本周要拿到的证据：
 
-- Compare one public-source run against one run that includes personal project context, such as A-Level Plus.
+- 比较一次纯公开资料研究，以及一次包含个人项目上下文的研究，例如 A-Level Plus。
 
-Kill criterion:
+终止标准：
 
-- If public-only runs cannot produce concrete assumptions, metrics, or MVP scope, source strategy must change.
+- 如果公开资料无法产出具体假设、指标或 MVP 范围，就需要调整信息源策略。
 
-Cheapest test:
+最低成本测试：
 
-- Require every run to cite at least 3 sources and list 3 falsifiable assumptions.
+- 要求每次研究至少引用 3 个来源，并列出 3 个可证伪假设。
 
-#### 3. Claim: The product is meaningfully different from ChatPRD or generic LLM chat.
+#### 3. 假设：这个产品和 ChatPRD 或通用 LLM 聊天有明显差异
 
-Fails if:
+失败条件：
 
-- The output is only a PRD generator with nicer formatting.
+- 输出只是格式更漂亮的 PRD 生成器。
 
-Evidence to get this week:
+本周要拿到的证据：
 
-- Run the same input through a generic chat prompt and compare output quality.
+- 用同一个输入跑通用聊天提示词，并比较输出质量。
 
-Kill criterion:
+终止标准：
 
-- If the agent does not add better source grounding, portfolio framing, or red-team testing, reposition it.
+- 如果 Agent 没有更好的来源支撑、作品集角度或反向质疑测试，就需要重新定位。
 
-Cheapest test:
+最低成本测试：
 
-- Create a comparison table: generic LLM vs ChatPRD-like PRD workflow vs AI PM Research Agent.
+- 建一张对比表：通用 LLM、ChatPRD 类 PRD 工作流、AI PM Research Agent。
 
-#### 4. Claim: Skills can be chained into a reliable workflow.
+#### 4. 假设：技能可以串成稳定工作流
 
-Fails if:
+失败条件：
 
-- Each skill produces isolated artifacts that do not feed into the next step cleanly.
+- 每个 Skill 输出彼此孤立，无法顺利进入下一步。
 
-Evidence to get this week:
+本周要拿到的证据：
 
-- Run one full chain from competitor analysis to PRD and inspect repeated or conflicting sections.
+- 从竞品分析到 PRD 跑一条完整链路，检查重复和冲突。
 
-Kill criterion:
+终止标准：
 
-- If more than 30% of sections are redundant or inconsistent, add an orchestrator template.
+- 如果超过 30% 的内容重复或互相不一致，就需要增加编排模板。
 
-Cheapest test:
+最低成本测试：
 
-- Build a single "Research Run Template" that defines inputs, intermediate outputs, and final artifact.
+- 做一个单独的“研究运行模板”，定义输入、中间输出和最终产物。
 
-### What's Well-Reasoned
+### 目前比较成立的判断
 
-- Starting with manual skill usage is the right first step. It tests product workflow before building software.
-- The first segment is clear and reachable because it can use public information.
-- The red-team step is valuable because it prevents the output from becoming motivational but non-actionable.
+- 从手动使用技能开始是对的。它先验证产品工作流，再决定是否开发软件。
+- 第一目标用户清晰且可触达，因为可以使用公开信息。
+- 反向质疑步骤很有价值，它能把“听起来不错”转化为可测试假设。
 
-### What I Couldn't Assess
+### 目前无法判断的部分
 
-- Will users pay for it?
-- Which workflow has the highest repeat usage?
-- Whether GitHub trend data is enough to sustain weekly content.
-- Whether the tool should become a web app, a Codex skill, or a GitHub repo template.
+- 用户是否愿意付费。
+- 哪个工作流有最高重复使用率。
+- GitHub 趋势数据是否足以支撑每周内容。
+- 这个工具最终应该做成网页、Codex Skill，还是 GitHub 仓库模板。
 
-## 6. Skill Experience Notes
+## 6. 技能体验记录
 
-### What Worked
+### 有效之处
 
-- The skills created a good chain: competitor analysis -> segments -> value prop -> PRD -> red-team.
-- The output became more product-like than a generic brainstorm.
-- The red-team skill is especially useful because it converts "sounds good" into testable assumptions.
+- 技能可以形成一条不错的链路：竞品分析 -> 用户细分 -> 价值主张 -> PRD -> 反向质疑。
+- 输出比普通头脑风暴更像产品产物。
+- 反向质疑技能特别有用，因为它能把“听起来合理”转成可测试假设。
 
-### What Was Weak
+### 不足之处
 
-- The skills are independent. They do not automatically preserve a shared context model.
-- `competitor-analysis` expects a known market, but this topic is partly a new category.
-- The default PRD template is useful, but too formal for early exploration unless shortened.
-- There is no built-in "portfolio angle" section, which is important for this use case.
+- 各个技能彼此独立，不会自动保存共享上下文。
+- `competitor-analysis` 默认市场已经明确，但这个主题本身还是一个新类别。
+- 默认 PRD 模板有用，但对早期探索来说偏正式，除非缩短。
+- 没有内置“作品集角度”模块，而这对本项目非常重要。
 
-### Enhancement Ideas
+### 增强方向
 
-Create a custom skill:
+创建一个自定义技能：
 
 `ai-pm-research-run`
 
-It should chain these steps:
+它应该串联这些步骤：
 
-1. Source scan.
-2. Competitor and alternative map.
-3. Segment and JTBD.
-4. Product opportunity.
-5. MVP PRD.
-6. Red-team assumptions.
-7. Portfolio / interview angle.
-8. Saved Markdown output.
+1. 信息源扫描。
+2. 竞品和替代方案地图。
+3. 用户细分和 JTBD。
+4. 产品机会。
+5. MVP PRD。
+6. 反向质疑假设。
+7. 作品集 / 面试角度。
+8. 保存 Markdown 输出。
 
-Add mandatory fields:
+必须增加的字段：
 
-- Source links.
-- Confidence level.
-- What evidence is missing.
-- Why this matters for AI PM.
-- How to turn it into a GitHub artifact.
-
+- 来源链接。
+- 置信度。
+- 缺少什么证据。
+- 为什么这对 AI PM 重要。
+- 如何转化为 GitHub 作品集产物。
