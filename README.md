@@ -24,6 +24,9 @@
 - `finance-ai-market-segments-2026-06-17.md`  
   第一轮技能体验产物 01。使用 `market-segments` 分析 AI 股票研究摘要助手的潜在用户，并明确第一轮先服务自己这个“AI PM 转行者 / 金融背景学习者”细分。
 
+- `finance-ai-competitor-analysis-2026-06-17.md`  
+  第一轮技能体验产物 02。使用 `competitor-analysis` 对比 FinRobot、TradingAgents、ai-hedge-fund、通用 LLM 方案和企业金融 Agents 信号，明确它们分别属于研究摘要、交易模拟、教育 demo 或企业工作流。
+
 ## 使用原则
 
 这个仓库不是普通学习笔记，而是一个作品项目。
