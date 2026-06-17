@@ -30,6 +30,9 @@
 - `competitor-analysis-skill-limitations-2026-06-17.md`  
   技能体验边界记录。总结 `competitor-analysis` 更适合资料整理和问题清单，不能替代真实用户体验和可用性测试。
 
+- `finance-ai-value-proposition-2026-06-17.md`  
+  第一轮技能体验产物 03。使用 `value-proposition` 为 AI 股票研究摘要助手设计安全价值主张，把重点从“帮你赚钱”拉回到“理解公开信息、降低研究成本、标注风险、沉淀作品集”。
+
 ## 使用原则
 
 这个仓库不是普通学习笔记，而是一个作品项目。
