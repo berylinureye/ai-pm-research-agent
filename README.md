@@ -33,6 +33,9 @@
 - `finance-ai-value-proposition-2026-06-17.md`  
   第一轮技能体验产物 03。使用 `value-proposition` 为 AI 股票研究摘要助手设计安全价值主张，把重点从“帮你赚钱”拉回到“理解公开信息、降低研究成本、标注风险、沉淀作品集”。
 
+- `finance-ai-mvp-red-team-2026-06-18.md`  
+  第一轮技能体验产物 04。使用 `create-prd` 和 `strategy-red-team` 把 AI 股票研究摘要助手收束成个人作品集 MVP，并攻击最危险的假设。
+
 ## 使用原则
 
 这个仓库不是普通学习笔记，而是一个作品项目。
